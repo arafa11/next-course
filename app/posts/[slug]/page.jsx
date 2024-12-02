@@ -1,4 +1,6 @@
+import PageViews from '@/app/components/PageViews'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
+import { Suspense } from 'react'
 
 export async function generateStaticParams() {
   const posts = await getAllPosts()
@@ -20,6 +22,9 @@ const Page = async ({ params }) => {
           <p className="text-sm font-light uppercase leading-snug tracking-wide text-gray-500">
             {frontmatter.author}
           </p>
+          <Suspense fallback={<div>loading view count</div>}>
+            <PageViews />
+          </Suspense>
         </header>
 
         {/* Post content */}
