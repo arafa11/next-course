@@ -15,6 +15,12 @@ const Header = () => {
           <li>
             <NavLink href={'/posts'}>Blog</NavLink>
           </li>
+          <li>
+            <NavLink href={'/todos'}>Todos</NavLink>
+          </li>
+          <li>
+            <NavLink href={'/guestbook'}>Guestbook</NavLink>
+          </li>
         </ul>
         <ThemeButton />
       </nav>
