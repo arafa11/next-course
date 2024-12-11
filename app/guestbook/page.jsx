@@ -2,6 +2,8 @@ import { getGuestbookEntries } from '@/lib/mongo/guestbook'
 import GuestbookEntryForm from '@/components/GuestbookEntryForm'
 
 export const dynamic = 'force-dynamic'
+// export const revalidate = 60 // if not using fetch, we can use route segment config options
+// revalidatePath // revalidateTag
 
 async function getData() {
   const { entries, error } = await getGuestbookEntries()
