@@ -16,12 +16,15 @@ module.exports = {
         lg: '2rem',
       },
     },
-    // extend: {
-    //   colors: {
-    //     background: "var(--background)",
-    //     foreground: "var(--foreground)",
-    //   },
-    // },
+    extend: {
+      fontFamily: {
+        playfair: ['var(--font-playfair)'],
+      },
+      //   colors: {
+      //     background: "var(--background)",
+      //     foreground: "var(--foreground)",
+      //   },
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 }
