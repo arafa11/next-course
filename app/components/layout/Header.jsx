@@ -1,4 +1,5 @@
 import NavLink from '../ui/NavLink'
+import SignInButton from '../ui/SigninButton'
 import ThemeButton from '../ui/ThemeButton'
 
 const Header = () => {
@@ -22,7 +23,10 @@ const Header = () => {
             <NavLink href={'/guestbook'}>Guestbook</NavLink>
           </li>
         </ul>
-        <ThemeButton />
+        <div className="flex items-center gap-4">
+          <ThemeButton />
+          <SignInButton />
+        </div>
       </nav>
     </header>
   )
